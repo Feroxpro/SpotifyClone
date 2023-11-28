@@ -7,15 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B40D97B52B13038E004DBC1F /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D97B42B13038E004DBC1F /* UIImage+Extensions.swift */; };
+		B40D97BB2B15D80F004DBC1F /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D97BA2B15D80F004DBC1F /* UIColor+Extensions.swift */; };
+		B40D97BD2B15DE33004DBC1F /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D97BC2B15DE33004DBC1F /* UIFont+Extensions.swift */; };
+		B40D97C02B15DFF4004DBC1F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D97BE2B15DFF4004DBC1F /* MainCoordinator.swift */; };
+		B40D97C12B15DFF4004DBC1F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D97BF2B15DFF4004DBC1F /* Coordinator.swift */; };
+		B40D97CA2B15E2BA004DBC1F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D97C92B15E2BA004DBC1F /* SignUpViewController.swift */; };
+		B40D97CC2B15E3F9004DBC1F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D97CB2B15E3F9004DBC1F /* LoginViewModel.swift */; };
+		B40D97CE2B15E77E004DBC1F /* SignUpEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D97CD2B15E77E004DBC1F /* SignUpEmailView.swift */; };
 		B45017822B12D65D00373308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45017812B12D65D00373308 /* AppDelegate.swift */; };
 		B45017842B12D65D00373308 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45017832B12D65D00373308 /* SceneDelegate.swift */; };
-		B45017862B12D65D00373308 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45017852B12D65D00373308 /* ViewController.swift */; };
+		B45017862B12D65D00373308 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45017852B12D65D00373308 /* LoginViewController.swift */; };
 		B45017892B12D65D00373308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45017872B12D65D00373308 /* Main.storyboard */; };
 		B450178B2B12D65E00373308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B450178A2B12D65E00373308 /* Assets.xcassets */; };
 		B450178E2B12D65E00373308 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B450178C2B12D65E00373308 /* LaunchScreen.storyboard */; };
 		B45017992B12D65F00373308 /* SpotifyCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45017982B12D65F00373308 /* SpotifyCloneTests.swift */; };
 		B45017A32B12D65F00373308 /* SpotifyCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45017A22B12D65F00373308 /* SpotifyCloneUITests.swift */; };
 		B45017A52B12D65F00373308 /* SpotifyCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45017A42B12D65F00373308 /* SpotifyCloneUITestsLaunchTests.swift */; };
+		B45017BC2B12D9F300373308 /* LoginViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45017BB2B12D9F300373308 /* LoginViewScreen.swift */; };
+		B45017C32B12DA9C00373308 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45017C02B12DA9C00373308 /* BaseTableViewCell.swift */; };
+		B45017C42B12DA9C00373308 /* BaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45017C12B12DA9C00373308 /* BaseViewCell.swift */; };
+		B45017C52B12DA9C00373308 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45017C22B12DA9C00373308 /* BaseView.swift */; };
+		B45017CA2B12DC3600373308 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B45017C92B12DC3600373308 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +49,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B40D97B42B13038E004DBC1F /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		B40D97BA2B15D80F004DBC1F /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		B40D97BC2B15DE33004DBC1F /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		B40D97BE2B15DFF4004DBC1F /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B40D97BF2B15DFF4004DBC1F /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B40D97C92B15E2BA004DBC1F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B40D97CB2B15E3F9004DBC1F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B40D97CD2B15E77E004DBC1F /* SignUpEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEmailView.swift; sourceTree = "<group>"; };
 		B450177E2B12D65D00373308 /* SpotifyClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45017812B12D65D00373308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B45017832B12D65D00373308 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B45017852B12D65D00373308 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B45017852B12D65D00373308 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B45017882B12D65D00373308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B450178A2B12D65E00373308 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B450178D2B12D65E00373308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +70,10 @@
 		B450179E2B12D65F00373308 /* SpotifyCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotifyCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45017A22B12D65F00373308 /* SpotifyCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyCloneUITests.swift; sourceTree = "<group>"; };
 		B45017A42B12D65F00373308 /* SpotifyCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B45017BB2B12D9F300373308 /* LoginViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewScreen.swift; sourceTree = "<group>"; };
+		B45017C02B12DA9C00373308 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		B45017C12B12DA9C00373308 /* BaseViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewCell.swift; sourceTree = "<group>"; };
+		B45017C22B12DA9C00373308 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B45017CA2B12DC3600373308 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +102,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B40D97B32B130369004DBC1F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B40D97B42B13038E004DBC1F /* UIImage+Extensions.swift */,
+				B40D97BA2B15D80F004DBC1F /* UIColor+Extensions.swift */,
+				B40D97BC2B15DE33004DBC1F /* UIFont+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B40D97C22B15E113004DBC1F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B450178C2B12D65E00373308 /* LaunchScreen.storyboard */,
+				B450178A2B12D65E00373308 /* Assets.xcassets */,
+				B45017872B12D65D00373308 /* Main.storyboard */,
+				B40D97C32B15E126004DBC1F /* Coordinator */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B40D97C32B15E126004DBC1F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B40D97BF2B15DFF4004DBC1F /* Coordinator.swift */,
+				B40D97BE2B15DFF4004DBC1F /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B40D97C42B15E163004DBC1F /* SignUpEmail */ = {
+			isa = PBXGroup;
+			children = (
+				B40D97C82B15E243004DBC1F /* SignUpEmailModel */,
+				B40D97C72B15E23B004DBC1F /* SignUpEmailView */,
+				B40D97C62B15E22A004DBC1F /* SignUpEmailViewModel */,
+				B40D97C52B15E20D004DBC1F /* SignUpEmailController */,
+			);
+			path = SignUpEmail;
+			sourceTree = "<group>";
+		};
+		B40D97C52B15E20D004DBC1F /* SignUpEmailController */ = {
+			isa = PBXGroup;
+			children = (
+				B40D97C92B15E2BA004DBC1F /* SignUpViewController.swift */,
+			);
+			path = SignUpEmailController;
+			sourceTree = "<group>";
+		};
+		B40D97C62B15E22A004DBC1F /* SignUpEmailViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUpEmailViewModel;
+			sourceTree = "<group>";
+		};
+		B40D97C72B15E23B004DBC1F /* SignUpEmailView */ = {
+			isa = PBXGroup;
+			children = (
+				B40D97CD2B15E77E004DBC1F /* SignUpEmailView.swift */,
+			);
+			path = SignUpEmailView;
+			sourceTree = "<group>";
+		};
+		B40D97C82B15E243004DBC1F /* SignUpEmailModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUpEmailModel;
+			sourceTree = "<group>";
+		};
 		B45017752B12D65D00373308 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +196,12 @@
 		B45017802B12D65D00373308 /* SpotifyClone */ = {
 			isa = PBXGroup;
 			children = (
-				B45017812B12D65D00373308 /* AppDelegate.swift */,
-				B45017832B12D65D00373308 /* SceneDelegate.swift */,
-				B45017852B12D65D00373308 /* ViewController.swift */,
-				B45017872B12D65D00373308 /* Main.storyboard */,
-				B450178A2B12D65E00373308 /* Assets.xcassets */,
-				B450178C2B12D65E00373308 /* LaunchScreen.storyboard */,
+				B45017C62B12DAA800373308 /* Delegate */,
+				B40D97C22B15E113004DBC1F /* Resources */,
+				B40D97B32B130369004DBC1F /* Extensions */,
+				B45017BF2B12DA9C00373308 /* Bases */,
+				B45017B12B12D8A800373308 /* Login */,
+				B40D97C42B15E163004DBC1F /* SignUpEmail */,
 				B450178F2B12D65E00373308 /* Info.plist */,
 			);
 			path = SpotifyClone;
@@ -127,6 +224,68 @@
 			path = SpotifyCloneUITests;
 			sourceTree = "<group>";
 		};
+		B45017B12B12D8A800373308 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B45017B42B12D8F700373308 /* LoginModel */,
+				B45017B62B12D93B00373308 /* LoginView */,
+				B45017B72B12D94200373308 /* LoginViewModel */,
+				B45017B82B12D94800373308 /* LoginController */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B45017B42B12D8F700373308 /* LoginModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = LoginModel;
+			path = "New Group/New Group/LoginModel";
+			sourceTree = "<group>";
+		};
+		B45017B62B12D93B00373308 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				B45017BB2B12D9F300373308 /* LoginViewScreen.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		B45017B72B12D94200373308 /* LoginViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B40D97CB2B15E3F9004DBC1F /* LoginViewModel.swift */,
+			);
+			path = LoginViewModel;
+			sourceTree = "<group>";
+		};
+		B45017B82B12D94800373308 /* LoginController */ = {
+			isa = PBXGroup;
+			children = (
+				B45017852B12D65D00373308 /* LoginViewController.swift */,
+			);
+			path = LoginController;
+			sourceTree = "<group>";
+		};
+		B45017BF2B12DA9C00373308 /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				B45017C02B12DA9C00373308 /* BaseTableViewCell.swift */,
+				B45017C12B12DA9C00373308 /* BaseViewCell.swift */,
+				B45017C22B12DA9C00373308 /* BaseView.swift */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
+		B45017C62B12DAA800373308 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				B45017832B12D65D00373308 /* SceneDelegate.swift */,
+				B45017812B12D65D00373308 /* AppDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +302,9 @@
 			dependencies = (
 			);
 			name = SpotifyClone;
+			packageProductDependencies = (
+				B45017C92B12DC3600373308 /* SnapKit */,
+			);
 			productName = SpotifyClone;
 			productReference = B450177E2B12D65D00373308 /* SpotifyClone.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +377,9 @@
 				Base,
 			);
 			mainGroup = B45017752B12D65D00373308;
+			packageReferences = (
+				B45017C82B12DC3600373308 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = B450177F2B12D65D00373308 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,9 +423,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B45017862B12D65D00373308 /* ViewController.swift in Sources */,
+				B45017862B12D65D00373308 /* LoginViewController.swift in Sources */,
+				B45017C42B12DA9C00373308 /* BaseViewCell.swift in Sources */,
 				B45017822B12D65D00373308 /* AppDelegate.swift in Sources */,
+				B45017BC2B12D9F300373308 /* LoginViewScreen.swift in Sources */,
+				B45017C52B12DA9C00373308 /* BaseView.swift in Sources */,
+				B40D97C02B15DFF4004DBC1F /* MainCoordinator.swift in Sources */,
+				B40D97CC2B15E3F9004DBC1F /* LoginViewModel.swift in Sources */,
+				B45017C32B12DA9C00373308 /* BaseTableViewCell.swift in Sources */,
 				B45017842B12D65D00373308 /* SceneDelegate.swift in Sources */,
+				B40D97C12B15DFF4004DBC1F /* Coordinator.swift in Sources */,
+				B40D97BB2B15D80F004DBC1F /* UIColor+Extensions.swift in Sources */,
+				B40D97BD2B15DE33004DBC1F /* UIFont+Extensions.swift in Sources */,
+				B40D97CE2B15E77E004DBC1F /* SignUpEmailView.swift in Sources */,
+				B40D97CA2B15E2BA004DBC1F /* SignUpViewController.swift in Sources */,
+				B40D97B52B13038E004DBC1F /* UIImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +624,6 @@
 				INFOPLIST_FILE = SpotifyClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,7 +651,6 @@
 				INFOPLIST_FILE = SpotifyClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -607,6 +782,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B45017C82B12DC3600373308 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B45017C92B12DC3600373308 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B45017C82B12DC3600373308 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B45017762B12D65D00373308 /* Project object */;
 }

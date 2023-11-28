@@ -7,9 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     var loginVs: LoginViewScreen?
+    var viewModel: LoginViewModel?
+    weak var coordinator:  MainCoordinator?
 
     
     override func loadView() {
@@ -20,9 +22,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        initViewModel()
     }
-
-
+    
+    func initViewModel() {
+        if let loginVs = self.loginVs {
+            if let coordinator = coordinator {
+                viewModel = LoginViewModel(loginVS: loginVs, loginViewController: self, coordinator: coordinator)
+                viewModel?.signUpButton()
+            }
+        }
+    }
 }
 
