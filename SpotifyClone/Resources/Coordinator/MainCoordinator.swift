@@ -25,16 +25,16 @@ class MainCoordinator: Coordinator {
     }
     
     func goToSignUpEmail() {
-        let viewController = SignUpViewController()
+        let viewController = SignUpEmailViewController()
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
     }
-//    
-//    func goToClients() {
-//        let viewController = ClientsViewController()
-//        viewController.coordinator = self
-//        self.navigationController.pushViewController(viewController, animated: true)
-//    }
+    
+    func goToCreatePasswordForEmail() {
+        let viewController = CreatePasswordForEmailViewController()
+        viewController.coordinator = self
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
 //    
 //    func goToAddClients() {
 //        let viewController = AddClientsViewController()
