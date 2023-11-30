@@ -21,16 +21,18 @@ class CreatePasswordForEmailView: BaseView {
     }()
     
     lazy var inputPasswordField: UITextField = {
-        let textField = UITextField()
+        let textField = UITextField()        
         textField.backgroundColor = .gray
         textField.layer.cornerRadius = 5
+        textField.isSecureTextEntry = true
         return textField
     }()
     
     lazy var showHideButton: UIButton = {
         let button = UIButton(type: .custom)
-        button.setImage(UIImage(named: "eye"), for: .normal)
-        button.setImage(UIImage(named: "eye.slash"), for: .selected)
+        button.tintColor = .white
+        button.setImage(UIImage(systemName: "eye"), for: .normal)
+        button.setImage(UIImage(systemName: "eye.slash"), for: .selected)
         button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         return button
     }()
@@ -57,7 +59,7 @@ class CreatePasswordForEmailView: BaseView {
     override func addSubviews() {
         addSubview(TitleLabel)
         addSubview(inputPasswordField)
-        inputPasswordField.addSubview(showHideButton)
+        addSubview(showHideButton)
         addSubview(noticeLabel)
         addSubview(nextButton)
     }
@@ -75,8 +77,8 @@ class CreatePasswordForEmailView: BaseView {
             make.width.equalTo(400)
         }
         showHideButton.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.centerX.equalToSuperview()
+            make.centerY.equalTo(inputPasswordField)
+            make.trailing.equalTo(inputPasswordField.snp.trailing).offset(-10)
         }
         noticeLabel.snp.makeConstraints { make in
             make.top.equalTo(inputPasswordField.snp.bottom).offset(5)

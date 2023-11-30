@@ -24,6 +24,7 @@ class SignUpEmailView: BaseView {
         let textField = UITextField()
         textField.backgroundColor = .gray
         textField.layer.cornerRadius = 5
+        textField.text = "felipe@gmail.com"
         return textField
     }()
     

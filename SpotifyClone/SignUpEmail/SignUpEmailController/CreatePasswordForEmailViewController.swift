@@ -29,6 +29,8 @@ class CreatePasswordForEmailViewController: UIViewController {
     func initViewModel() {
         if let createPasswordScreen = self.createPasswordScreen {
             if let coordinator = coordinator {
+                viewModel = CreatePasswordForEmailViewModel.init(createPasswordForEmailScreen: createPasswordScreen, createPasswordForEmailController: self, coordinator: coordinator)
+                viewModel?.showHideAction()
             }
         }
     }
