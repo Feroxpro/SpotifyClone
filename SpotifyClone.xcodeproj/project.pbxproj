@@ -33,6 +33,9 @@
 		B4AA9A912B16E7D60053E663 /* CreatePasswordForEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9A902B16E7D60053E663 /* CreatePasswordForEmailViewModel.swift */; };
 		B4AA9A932B16E7ED0053E663 /* CreatePasswordForEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9A922B16E7ED0053E663 /* CreatePasswordForEmailView.swift */; };
 		B4AA9A952B16E9750053E663 /* CreatePasswordForEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9A942B16E9750053E663 /* CreatePasswordForEmailViewController.swift */; };
+		B4AA9A972B196FFA0053E663 /* DateOfBirthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9A962B196FFA0053E663 /* DateOfBirthViewController.swift */; };
+		B4AA9A992B19705D0053E663 /* DateOfBirthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9A982B19705D0053E663 /* DateOfBirthView.swift */; };
+		B4AA9A9B2B1970D00053E663 /* DateOfBirthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9A9A2B1970D00053E663 /* DateOfBirthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		B4AA9A902B16E7D60053E663 /* CreatePasswordForEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordForEmailViewModel.swift; sourceTree = "<group>"; };
 		B4AA9A922B16E7ED0053E663 /* CreatePasswordForEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordForEmailView.swift; sourceTree = "<group>"; };
 		B4AA9A942B16E9750053E663 /* CreatePasswordForEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordForEmailViewController.swift; sourceTree = "<group>"; };
+		B4AA9A962B196FFA0053E663 /* DateOfBirthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthViewController.swift; sourceTree = "<group>"; };
+		B4AA9A982B19705D0053E663 /* DateOfBirthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthView.swift; sourceTree = "<group>"; };
+		B4AA9A9A2B1970D00053E663 /* DateOfBirthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 		B40D97C22B15E113004DBC1F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B4AA9A9C2B197CC30053E663 /* Components */,
 				B450178C2B12D65E00373308 /* LaunchScreen.storyboard */,
 				B450178A2B12D65E00373308 /* Assets.xcassets */,
 				B45017872B12D65D00373308 /* Main.storyboard */,
@@ -156,6 +163,7 @@
 			children = (
 				B40D97C92B15E2BA004DBC1F /* SignUpEmailViewController.swift */,
 				B4AA9A942B16E9750053E663 /* CreatePasswordForEmailViewController.swift */,
+				B4AA9A962B196FFA0053E663 /* DateOfBirthViewController.swift */,
 			);
 			path = SignUpEmailController;
 			sourceTree = "<group>";
@@ -165,6 +173,7 @@
 			children = (
 				B4AA9A8D2B169CC90053E663 /* SignUpEmailViewModel.swift */,
 				B4AA9A902B16E7D60053E663 /* CreatePasswordForEmailViewModel.swift */,
+				B4AA9A9A2B1970D00053E663 /* DateOfBirthViewModel.swift */,
 			);
 			path = SignUpEmailViewModel;
 			sourceTree = "<group>";
@@ -174,6 +183,7 @@
 			children = (
 				B40D97CD2B15E77E004DBC1F /* SignUpEmailView.swift */,
 				B4AA9A922B16E7ED0053E663 /* CreatePasswordForEmailView.swift */,
+				B4AA9A982B19705D0053E663 /* DateOfBirthView.swift */,
 			);
 			path = SignUpEmailView;
 			sourceTree = "<group>";
@@ -296,6 +306,13 @@
 				B45017812B12D65D00373308 /* AppDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		B4AA9A9C2B197CC30053E663 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,6 +455,7 @@
 				B45017862B12D65D00373308 /* LoginViewController.swift in Sources */,
 				B45017C42B12DA9C00373308 /* BaseViewCell.swift in Sources */,
 				B4AA9A932B16E7ED0053E663 /* CreatePasswordForEmailView.swift in Sources */,
+				B4AA9A9B2B1970D00053E663 /* DateOfBirthViewModel.swift in Sources */,
 				B4AA9A8E2B169CC90053E663 /* SignUpEmailViewModel.swift in Sources */,
 				B45017822B12D65D00373308 /* AppDelegate.swift in Sources */,
 				B45017BC2B12D9F300373308 /* LoginViewScreen.swift in Sources */,
@@ -452,7 +470,9 @@
 				B40D97BD2B15DE33004DBC1F /* UIFont+Extensions.swift in Sources */,
 				B40D97CE2B15E77E004DBC1F /* SignUpEmailView.swift in Sources */,
 				B40D97CA2B15E2BA004DBC1F /* SignUpEmailViewController.swift in Sources */,
+				B4AA9A992B19705D0053E663 /* DateOfBirthView.swift in Sources */,
 				B4AA9A952B16E9750053E663 /* CreatePasswordForEmailViewController.swift in Sources */,
+				B4AA9A972B196FFA0053E663 /* DateOfBirthViewController.swift in Sources */,
 				B40D97B52B13038E004DBC1F /* UIImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

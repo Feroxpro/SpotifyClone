@@ -31,6 +31,43 @@ class CreatePasswordForEmailViewModel {
         createPasswordForEmailScreen.inputPasswordField.isSecureTextEntry.toggle()
         createPasswordForEmailScreen.showHideButton.isSelected = !createPasswordForEmailScreen.inputPasswordField.isSecureTextEntry
     }
+    
+    func updateNextButtonState() {
+        if let textCount = createPasswordForEmailScreen.inputPasswordField.text?.count {
+            if textCount >= 8 {
+            createPasswordForEmailScreen.nextButton.backgroundColor = .white
+            } else {
+                createPasswordForEmailScreen.nextButton.backgroundColor = .gray
+            }
+        }
+    }
+
+    // Adicione a ação de destino para o evento EditingChanged do campo de e-mail
+    @objc func emailTextFieldEditingChanged(_ textField: UITextField) {
+        updateNextButtonState()
+    }
+
+    // Adicione a ação de destino para o evento EditingDidBegin do campo de e-mail
+    @objc func emailTextFieldEditingDidBegin(_ textField: UITextField) {
+        updateNextButtonState()
+    }
+    
+    func updateButtonState() {
+        createPasswordForEmailScreen.inputPasswordField.addTarget(self, action: #selector(emailTextFieldEditingChanged(_:)), for: .editingChanged)
+        createPasswordForEmailScreen.inputPasswordField.addTarget(self, action: #selector(emailTextFieldEditingDidBegin(_:)), for: .editingDidBegin)
+    }
+    
+    func signUpButton() {
+        createPasswordForEmailScreen.nextButton.addTarget(self, action: #selector(getSignUpEmail), for: .touchUpInside)
+    }
+    
+    @objc private func getSignUpEmail() {
+        if let textCount = createPasswordForEmailScreen.inputPasswordField.text?.count {
+            if textCount >= 8 {
+                coordinator?.goToDateOfBirth()
+            }
+        }
+    }
 }
 
 

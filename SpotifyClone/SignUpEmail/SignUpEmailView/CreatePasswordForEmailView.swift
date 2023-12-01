@@ -23,6 +23,7 @@ class CreatePasswordForEmailView: BaseView {
     lazy var inputPasswordField: UITextField = {
         let textField = UITextField()        
         textField.backgroundColor = .gray
+        textField.text = "12345678"
         textField.layer.cornerRadius = 5
         textField.isSecureTextEntry = true
         return textField

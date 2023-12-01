@@ -35,13 +35,12 @@ class MainCoordinator: Coordinator {
         viewController.coordinator = self
         self.navigationController.pushViewController(viewController, animated: true)
     }
-//    
-//    func goToAddClients() {
-//        let viewController = AddClientsViewController()
-//        viewController.coordinator = self
-//        self.navigationController.present(viewController, animated: true)
-//    }
-//    
+    func goToDateOfBirth() {
+        let viewController = DateOfBirthViewController()
+        viewController.coordinator = self
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
+//
 //    func goToServices() {
 //        let viewController = ServicesViewController()
 //        viewController.coordinator = self
