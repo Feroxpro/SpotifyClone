@@ -14,6 +14,7 @@ class DateOfBirthViewController: UIViewController {
     var viewModel: DateOfBirthViewModel?
     weak var coordinator:  MainCoordinator?
 
+
     
     override func loadView() {
         dateOfBirthView = DateOfBirthView()
@@ -33,6 +34,7 @@ class DateOfBirthViewController: UIViewController {
                 viewModel?.configureDatePicker()
                 viewModel?.configureToolbar()
                 viewModel?.nextButton()
+                viewModel?.initialDateText()
             }
         }
     }

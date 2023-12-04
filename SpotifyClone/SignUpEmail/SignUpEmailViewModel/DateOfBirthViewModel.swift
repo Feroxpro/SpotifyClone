@@ -22,6 +22,13 @@ class DateOfBirthViewModel {
         self.dateOfBirthViewController = dateOfBirthViewController
         self.coordinator = coordinator
     }
+    func initialDateText() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.dateFormat = "dd 'de' MMMM 'de' yyyy"
+        dateFormatter.locale = Locale(identifier: "pt_BR")
+        dateOfBirthView.datePicker.text = dateFormatter.string(from: datePicker.date)
+    }
     
     public var selectedDate: Date? {
         get {
@@ -37,7 +44,6 @@ class DateOfBirthViewModel {
         datePicker.datePickerMode = .date
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.locale = Locale(identifier: "pt_BR")
-            print(datePicker)
         let screenSize = UIScreen.main.bounds.size
         let datePickerHeight = datePicker.frame.size.height
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
