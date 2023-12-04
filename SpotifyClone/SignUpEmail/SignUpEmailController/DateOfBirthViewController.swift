@@ -32,6 +32,7 @@ class DateOfBirthViewController: UIViewController {
                 viewModel = DateOfBirthViewModel(dateOfBirthView: dateOfBirthView, dateOfBirthViewController: self, coordinator: coordinator)
                 viewModel?.configureDatePicker()
                 viewModel?.configureToolbar()
+                viewModel?.nextButton()
             }
         }
     }

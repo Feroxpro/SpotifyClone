@@ -27,7 +27,6 @@ class CreatePasswordForEmailViewModel {
             }
 
     @objc func togglePasswordVisibility() {
-        // Alternando a visibilidade da senha
         createPasswordForEmailScreen.inputPasswordField.isSecureTextEntry.toggle()
         createPasswordForEmailScreen.showHideButton.isSelected = !createPasswordForEmailScreen.inputPasswordField.isSecureTextEntry
     }
@@ -42,12 +41,10 @@ class CreatePasswordForEmailViewModel {
         }
     }
 
-    // Adicione a ação de destino para o evento EditingChanged do campo de e-mail
     @objc func emailTextFieldEditingChanged(_ textField: UITextField) {
         updateNextButtonState()
     }
 
-    // Adicione a ação de destino para o evento EditingDidBegin do campo de e-mail
     @objc func emailTextFieldEditingDidBegin(_ textField: UITextField) {
         updateNextButtonState()
     }

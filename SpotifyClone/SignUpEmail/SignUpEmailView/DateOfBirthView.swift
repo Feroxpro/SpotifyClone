@@ -23,6 +23,7 @@ class DateOfBirthView: BaseView {
     lazy var datePicker: UITextField = {
         let date = UITextField()
         date.backgroundColor = .gray
+        date.layer.cornerRadius = 5
         return date
     }()
     
@@ -34,13 +35,24 @@ class DateOfBirthView: BaseView {
         let font = UIFont.systemFont(ofSize: 15)
         button.titleLabel?.font = font.bold()
         button.layer.cornerRadius = 24
+        button.isEnabled = false
         return button
+    }()
+    
+    lazy var noticeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Sentimos muito, mas você não atende os requisitos de idade do spotify"
+        label.textColor = UIColor.white
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.isHidden = true
+        return label
     }()
     
     override func addSubviews() {
         addSubview(TitleLabel)
         addSubview(nextButton)
         addSubview(datePicker)
+        addSubview(noticeLabel)
     }
     
     override func configureConstraints() {
@@ -49,17 +61,19 @@ class DateOfBirthView: BaseView {
             make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(20)
             make.leading.equalTo(safeAreaLayoutGuide).offset(5)
         }
-        
         datePicker.snp.makeConstraints { make in
             make.top.equalTo(TitleLabel.snp.bottom).offset(5)
             make.leading.equalTo(safeAreaLayoutGuide).offset(5)
             make.height.equalTo(50)
             make.width.equalTo(400)
         }
-
+        noticeLabel.snp.makeConstraints { make in
+            make.top.equalTo(datePicker.snp.bottom).offset(5)
+            make.leading.equalTo(safeAreaLayoutGuide).offset(5)
+        }
         nextButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(datePicker.snp.bottom).offset(35)
+            make.top.equalTo(noticeLabel.snp.bottom).offset(25)
             make.height.equalTo(45)
             make.width.equalTo(120)
         }

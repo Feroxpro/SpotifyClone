@@ -37,8 +37,7 @@ class DateOfBirthViewModel {
         datePicker.datePickerMode = .date
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.locale = Locale(identifier: "pt_BR")
-        
-        
+            print(datePicker)
         let screenSize = UIScreen.main.bounds.size
         let datePickerHeight = datePicker.frame.size.height
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
@@ -66,29 +65,49 @@ class DateOfBirthViewModel {
         dateOfBirthView.datePicker.text = dateFormatter.string(from: datePicker.date)
     }
     
-    @objc private func dismissDatePicker() {
-        print(dateOfBirthView.datePicker.text ?? "")
-        guard let buceta = dateOfBirthView.datePicker.text else {return}
-        calcularDiferencaEmDias()
-        dateOfBirthView.datePicker.endEditing(true)
-    }
-    
     private func showDatePicker() {
         dateOfBirthView.datePicker.becomeFirstResponder()
     }
     
-    func calcularDiferencaEmDias() {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd 'de' MMMM 'de' yyyy"
-        dateFormatter.locale = Locale(identifier: "pt_BR")
-
-        guard let data1 = dateFormatter.date(from: dateOfBirthView.datePicker.text ?? ""),
-              let data2 = dateFormatter.date(from: "1 de dezembro de 2023") else { return
+    private func calcularIdade() -> Int? {
+            guard let selectedDate = selectedDate else {
+                return nil
+            }
+            
+            let calendar = Calendar.current
+            let currentDate = Date()
+            let components = calendar.dateComponents([.year], from: selectedDate, to: currentDate)
+            return components.year
         }
-
-        let calendar = Calendar.current
-        let year: Double = 365.25
-        let components = calendar.dateComponents([.day], from: data1, to: data2)
-        print(components.day / year)
+        
+        @objc private func dismissDatePicker() {
+            guard let selectedDate = selectedDate else {
+                return
+            }
+            
+            if let idade = calcularIdade(), idade >= 16 {
+                dateOfBirthView.nextButton.backgroundColor = .white
+                dateOfBirthView.nextButton.isEnabled = true
+                dateOfBirthView.nextButton.updateConfiguration()
+                dateOfBirthView.noticeLabel.isHidden = true
+                dateOfBirthView.datePicker.textColor = .black
+                dateOfBirthView.datePicker.backgroundColor = .gray
+            } else {
+                dateOfBirthView.noticeLabel.isHidden = false
+                dateOfBirthView.datePicker.backgroundColor = .white
+                dateOfBirthView.datePicker.textColor = .red
+                dateOfBirthView.nextButton.updateConfiguration()
+            }
+            
+            dateOfBirthView.datePicker.endEditing(true)
+        }
+    
+    func nextButton() {
+        dateOfBirthView.nextButton.addTarget(self, action: #selector(goForNextPage), for: .touchUpInside)
+    }
+    
+    @objc private func goForNextPage() {
+        print("GOGOGO")
+        dismissDatePicker()
     }
 }
