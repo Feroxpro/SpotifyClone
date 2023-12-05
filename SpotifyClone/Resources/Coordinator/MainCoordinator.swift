@@ -40,12 +40,12 @@ class MainCoordinator: Coordinator {
         viewController.coordinator = self
         self.navigationController.pushViewController(viewController, animated: true)
     }
-//
-//    func goToServices() {
-//        let viewController = ServicesViewController()
-//        viewController.coordinator = self
-//        self.navigationController.pushViewController(viewController, animated: true)
-//    }
+
+    func goToGender() {
+        let viewController = GenderViewController()
+        viewController.coordinator = self
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
 //    
 //    func goToAddService() {
 //        let viewController = AddServiceViewController()

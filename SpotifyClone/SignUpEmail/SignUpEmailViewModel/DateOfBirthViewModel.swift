@@ -22,6 +22,7 @@ class DateOfBirthViewModel {
         self.dateOfBirthViewController = dateOfBirthViewController
         self.coordinator = coordinator
     }
+    
     func initialDateText() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
@@ -58,8 +59,9 @@ class DateOfBirthViewModel {
     
     func configureToolbar() {
         toolbar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "Concluído", style: .done, target: self, action: #selector(dismissDatePicker))
-        toolbar.setItems([doneButton], animated: false)
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "OK", style: .plain, target: self, action: #selector(dismissDatePicker))
+        toolbar.setItems([flexibleSpace, doneButton], animated: false)
         dateOfBirthView.datePicker.inputAccessoryView = toolbar
     }
     
@@ -87,9 +89,6 @@ class DateOfBirthViewModel {
         }
         
         @objc private func dismissDatePicker() {
-            guard let selectedDate = selectedDate else {
-                return
-            }
             
             if let idade = calcularIdade(), idade >= 16 {
                 dateOfBirthView.nextButton.backgroundColor = .white
@@ -113,7 +112,7 @@ class DateOfBirthViewModel {
     }
     
     @objc private func goForNextPage() {
-        print("GOGOGO")
+        coordinator?.goToGender()
         dismissDatePicker()
     }
 }

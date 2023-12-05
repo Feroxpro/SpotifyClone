@@ -36,6 +36,9 @@
 		B4AA9A972B196FFA0053E663 /* DateOfBirthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9A962B196FFA0053E663 /* DateOfBirthViewController.swift */; };
 		B4AA9A992B19705D0053E663 /* DateOfBirthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9A982B19705D0053E663 /* DateOfBirthView.swift */; };
 		B4AA9A9B2B1970D00053E663 /* DateOfBirthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9A9A2B1970D00053E663 /* DateOfBirthViewModel.swift */; };
+		B4AA9AA02B1F8E100053E663 /* GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9A9F2B1F8E100053E663 /* GenderView.swift */; };
+		B4AA9AA32B1F8F3D0053E663 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9AA22B1F8F3D0053E663 /* GenderViewController.swift */; };
+		B4AA9AA52B1F8FE30053E663 /* GenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9AA42B1F8FE30053E663 /* GenderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,9 @@
 		B4AA9A962B196FFA0053E663 /* DateOfBirthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthViewController.swift; sourceTree = "<group>"; };
 		B4AA9A982B19705D0053E663 /* DateOfBirthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthView.swift; sourceTree = "<group>"; };
 		B4AA9A9A2B1970D00053E663 /* DateOfBirthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthViewModel.swift; sourceTree = "<group>"; };
+		B4AA9A9F2B1F8E100053E663 /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
+		B4AA9AA22B1F8F3D0053E663 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
+		B4AA9AA42B1F8FE30053E663 /* GenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,7 @@
 				B40D97C92B15E2BA004DBC1F /* SignUpEmailViewController.swift */,
 				B4AA9A942B16E9750053E663 /* CreatePasswordForEmailViewController.swift */,
 				B4AA9A962B196FFA0053E663 /* DateOfBirthViewController.swift */,
+				B4AA9AA22B1F8F3D0053E663 /* GenderViewController.swift */,
 			);
 			path = SignUpEmailController;
 			sourceTree = "<group>";
@@ -174,6 +181,7 @@
 				B4AA9A8D2B169CC90053E663 /* SignUpEmailViewModel.swift */,
 				B4AA9A902B16E7D60053E663 /* CreatePasswordForEmailViewModel.swift */,
 				B4AA9A9A2B1970D00053E663 /* DateOfBirthViewModel.swift */,
+				B4AA9AA42B1F8FE30053E663 /* GenderViewModel.swift */,
 			);
 			path = SignUpEmailViewModel;
 			sourceTree = "<group>";
@@ -184,6 +192,7 @@
 				B40D97CD2B15E77E004DBC1F /* SignUpEmailView.swift */,
 				B4AA9A922B16E7ED0053E663 /* CreatePasswordForEmailView.swift */,
 				B4AA9A982B19705D0053E663 /* DateOfBirthView.swift */,
+				B4AA9A9F2B1F8E100053E663 /* GenderView.swift */,
 			);
 			path = SignUpEmailView;
 			sourceTree = "<group>";
@@ -461,6 +470,7 @@
 				B45017BC2B12D9F300373308 /* LoginViewScreen.swift in Sources */,
 				B45017C52B12DA9C00373308 /* BaseView.swift in Sources */,
 				B40D97C02B15DFF4004DBC1F /* MainCoordinator.swift in Sources */,
+				B4AA9AA32B1F8F3D0053E663 /* GenderViewController.swift in Sources */,
 				B40D97CC2B15E3F9004DBC1F /* LoginViewModel.swift in Sources */,
 				B4AA9A912B16E7D60053E663 /* CreatePasswordForEmailViewModel.swift in Sources */,
 				B45017C32B12DA9C00373308 /* BaseTableViewCell.swift in Sources */,
@@ -469,6 +479,8 @@
 				B40D97BB2B15D80F004DBC1F /* UIColor+Extensions.swift in Sources */,
 				B40D97BD2B15DE33004DBC1F /* UIFont+Extensions.swift in Sources */,
 				B40D97CE2B15E77E004DBC1F /* SignUpEmailView.swift in Sources */,
+				B4AA9AA52B1F8FE30053E663 /* GenderViewModel.swift in Sources */,
+				B4AA9AA02B1F8E100053E663 /* GenderView.swift in Sources */,
 				B40D97CA2B15E2BA004DBC1F /* SignUpEmailViewController.swift in Sources */,
 				B4AA9A992B19705D0053E663 /* DateOfBirthView.swift in Sources */,
 				B4AA9A952B16E9750053E663 /* CreatePasswordForEmailViewController.swift in Sources */,
