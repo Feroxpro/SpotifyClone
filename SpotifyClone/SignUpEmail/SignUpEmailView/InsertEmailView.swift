@@ -9,15 +9,16 @@ import Foundation
 import UIKit
 import SnapKit
 
-class SignUpEmailView: BaseView {
+class InsertEmailView: BaseView {
     
     lazy var titleLabel: UILabel = {
-        let label = Titlelabel(text: "Qual o seu E-mail")
+        let label = Defaultlabel(text: "Qual o seu E-mail")
         return label
     }()
     
     lazy var inputEmailField: UITextField = {
         let textField = DefaultTextField()
+        textField.text = "felipe@gmail.com"
         return textField
     }()
     

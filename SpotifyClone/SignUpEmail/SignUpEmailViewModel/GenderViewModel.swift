@@ -72,4 +72,12 @@ class GenderViewModel: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
     @objc func doneButtonTapped() {
         genderView.genderTextField.resignFirstResponder()  // Substitua genderTextField pelo nome do seu UITextField
     }
+    
+    func nextButton() {
+        genderView.nextButton.addTarget(self, action: #selector(getNameAndTerm), for: .touchUpInside)
+    }
+    
+    @objc private func getNameAndTerm() {
+        coordinator?.goToNameAndTerm()
+    }
 }

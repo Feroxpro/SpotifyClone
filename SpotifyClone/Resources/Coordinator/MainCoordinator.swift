@@ -25,7 +25,7 @@ class MainCoordinator: Coordinator {
     }
     
     func goToSignUpEmail() {
-        let viewController = SignUpEmailViewController()
+        let viewController = InsertEmailViewController()
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
     }
@@ -46,7 +46,13 @@ class MainCoordinator: Coordinator {
         viewController.coordinator = self
         self.navigationController.pushViewController(viewController, animated: true)
     }
-//    
+    
+    func goToNameAndTerm() {
+        let viewController = NameAndTermOfUseViewController()
+        viewController.coordinator = self
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
+//
 //    func goToAddService() {
 //        let viewController = AddServiceViewController()
 //        viewController.coordinator = self

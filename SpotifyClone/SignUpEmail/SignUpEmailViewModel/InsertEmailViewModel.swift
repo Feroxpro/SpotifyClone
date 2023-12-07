@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-class SignUpEmailViewModel {
+class InsertEmailViewModel {
     
-    var signUpScreen = SignUpEmailView()
-    private let signUpViewController: SignUpEmailViewController?
+    var signUpScreen = InsertEmailView()
+    private let signUpViewController: InsertEmailViewController?
     weak var coordinator: MainCoordinator?
     
-    init (signUpScreen: SignUpEmailView, signUpViewController: SignUpEmailViewController, coordinator: MainCoordinator) {
+    init (signUpScreen: InsertEmailView, signUpViewController: InsertEmailViewController, coordinator: MainCoordinator) {
         self.signUpScreen = signUpScreen
         self.signUpViewController = signUpViewController
         self.coordinator = coordinator

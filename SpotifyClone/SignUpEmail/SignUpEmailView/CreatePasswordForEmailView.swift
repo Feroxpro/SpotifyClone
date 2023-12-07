@@ -12,12 +12,13 @@ import SnapKit
 class CreatePasswordForEmailView: BaseView {
     
     lazy var titleLabel: UILabel = {
-        let label = Titlelabel(text: "Crie uma senha?")
+        let label = Defaultlabel(text: "Crie uma senha?")
         return label
     }()
     
     lazy var inputPasswordField: UITextField = {
         let textField = DefaultTextField()
+        textField.text = "12345678"
         textField.isSecureTextEntry = true
         return textField
     }()

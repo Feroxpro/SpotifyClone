@@ -8,15 +8,15 @@
 import Foundation
 import UIKit
 
-class SignUpEmailViewController: UIViewController {
+class InsertEmailViewController: UIViewController {
     
-    var signUpScreen: SignUpEmailView?
-    var viewModel: SignUpEmailViewModel?
+    var signUpScreen: InsertEmailView?
+    var viewModel: InsertEmailViewModel?
     weak var coordinator:  MainCoordinator?
 
     
     override func loadView() {
-        signUpScreen = SignUpEmailView()
+        signUpScreen = InsertEmailView()
         view = signUpScreen
         
     }
@@ -31,7 +31,7 @@ class SignUpEmailViewController: UIViewController {
     func initViewModel() {
         if let signUpScreen = self.signUpScreen {
             if let coordinator = coordinator {
-                viewModel = SignUpEmailViewModel(signUpScreen: signUpScreen, signUpViewController: self, coordinator: coordinator)
+                viewModel = InsertEmailViewModel(signUpScreen: signUpScreen, signUpViewController: self, coordinator: coordinator)
                 viewModel?.updateButtonState()
                 viewModel?.signUpButton()
             }

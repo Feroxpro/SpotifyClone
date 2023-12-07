@@ -9,7 +9,7 @@
 
 import UIKit
 
-class Titlelabel: UILabel {
+class Defaultlabel: UILabel {
    
     init(text: String) {
             super.init(frame: .zero)

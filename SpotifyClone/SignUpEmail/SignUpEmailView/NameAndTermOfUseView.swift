@@ -1,18 +1,17 @@
 //
-//  GenderView.swift
+//  NameAndTermOfUse.swift
 //  SpotifyClone
 //
-//  Created by Felipe Henrique Domingos on 05/12/23.
+//  Created by Felipe Henrique Domingos on 07/12/23.
 //
 
 import Foundation
 import UIKit
-import SnapKit
 
-class GenderView: BaseView {
+class NameAndTermOfUseView: BaseView {
     
     lazy var titleLabel: UILabel = {
-        let label = Defaultlabel(text: "Qual é o seu gênero?")
+        let label = Defaultlabel(text: "Qual é o seu nome?")
         return label
     }()
     
@@ -22,14 +21,23 @@ class GenderView: BaseView {
     }()
     
     lazy var nextButton: UIButton = {
-        let button = NextButton(title: "Avançar")
+        let button = NextButton(title: "Isso vai aparecer no seu perfil do spotify")
         return button
     }()
     
+    lazy var mandatoryLabel: UILabel = {
+        let label = NoticeLabel(text: " OBRIGATÓRIO ")
+        label.textColor = .black
+        label.backgroundColor = .gray
+        label.layer.cornerRadius = 5
+        return label
+    }()
+
     override func addSubviews() {
         addSubview(titleLabel)
         addSubview(nextButton)
         addSubview(genderTextField)
+        addSubview(mandatoryLabel)
     }
     
     override func configureConstraints() {
@@ -42,10 +50,14 @@ class GenderView: BaseView {
             make.top.equalTo(titleLabel.snp.bottom).offset(5)
             make.leading.equalTo(safeAreaLayoutGuide).offset(5)
         }
-
+        
         nextButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(genderTextField.snp.bottom).offset(40)
+        }
+        mandatoryLabel.snp.makeConstraints { make in
+            make.top.equalTo(nextButton.snp.bottom).offset(60)
+            make.leading.equalTo(safeAreaLayoutGuide).offset(5)
         }
     }
 }
