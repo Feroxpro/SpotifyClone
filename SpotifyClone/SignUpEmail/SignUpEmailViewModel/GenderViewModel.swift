@@ -32,7 +32,7 @@ class GenderViewModel: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func configureGenderPickerView() {
-        genderView.datePicker.inputView = pickerView  // Substitua genderTextField pelo nome do seu UITextField
+        genderView.genderTextField.inputView = pickerView  // Substitua genderTextField pelo nome do seu UITextField
 
         // Configurar toolbar com botão "OK"
         toolbar.barStyle = .default
@@ -42,8 +42,8 @@ class GenderViewModel: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
         let doneButton = UIBarButtonItem(title: "OK", style: .plain, target: self, action: #selector(doneButtonTapped))
         toolbar.setItems([flexibleSpace, doneButton], animated: false)
         toolbar.isUserInteractionEnabled = true
-        genderView.datePicker.inputAccessoryView = toolbar
-        genderView.datePicker.text = generos[0]
+        genderView.genderTextField.inputAccessoryView = toolbar
+        genderView.genderTextField.text = generos[0]
 
     }
 
@@ -64,12 +64,12 @@ class GenderViewModel: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
     // MARK: - UIPickerViewDelegate
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        genderView.datePicker.text = generos[row]  // Substitua genderTextField pelo nome do seu UITextField
+        genderView.genderTextField.text = generos[row]  // Substitua genderTextField pelo nome do seu UITextField
     }
 
     // MARK: - Toolbar Button Action
 
     @objc func doneButtonTapped() {
-        genderView.datePicker.resignFirstResponder()  // Substitua genderTextField pelo nome do seu UITextField
+        genderView.genderTextField.resignFirstResponder()  // Substitua genderTextField pelo nome do seu UITextField
     }
 }

@@ -28,7 +28,7 @@ class DateOfBirthViewModel {
         dateFormatter.dateStyle = .medium
         dateFormatter.dateFormat = "dd 'de' MMMM 'de' yyyy"
         dateFormatter.locale = Locale(identifier: "pt_BR")
-        dateOfBirthView.datePicker.text = dateFormatter.string(from: datePicker.date)
+        dateOfBirthView.dateTextField.text = dateFormatter.string(from: datePicker.date)
     }
     
     public var selectedDate: Date? {
@@ -52,7 +52,7 @@ class DateOfBirthViewModel {
             let yPosition = screenSize.height - datePickerHeight - bottomInset
             datePicker.frame = CGRect(x: 0, y: yPosition, width: screenSize.width, height: datePickerHeight)
             
-            dateOfBirthView.datePicker.inputView = datePicker
+            dateOfBirthView.dateTextField.inputView = datePicker
             datePicker.addTarget(self, action: #selector(updateTextField), for: .valueChanged)
         }
     }
@@ -60,9 +60,9 @@ class DateOfBirthViewModel {
     func configureToolbar() {
         toolbar.sizeToFit()
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(title: "OK", style: .plain, target: self, action: #selector(dismissDatePicker))
+        let doneButton = UIBarButtonItem(title: "OK", style: .plain, target: self, action: #selector(goForNextPage))
         toolbar.setItems([flexibleSpace, doneButton], animated: false)
-        dateOfBirthView.datePicker.inputAccessoryView = toolbar
+        dateOfBirthView.dateTextField.inputAccessoryView = toolbar
     }
     
     @objc private func updateTextField() {
@@ -70,49 +70,42 @@ class DateOfBirthViewModel {
         dateFormatter.dateStyle = .medium
         dateFormatter.dateFormat = "dd 'de' MMMM 'de' yyyy"
         dateFormatter.locale = Locale(identifier: "pt_BR")
-        dateOfBirthView.datePicker.text = dateFormatter.string(from: datePicker.date)
+        dateOfBirthView.dateTextField.text = dateFormatter.string(from: datePicker.date)
     }
     
     private func showDatePicker() {
-        dateOfBirthView.datePicker.becomeFirstResponder()
+        dateOfBirthView.dateTextField.becomeFirstResponder()
     }
     
     private func calcularIdade() -> Int? {
-            guard let selectedDate = selectedDate else {
-                return nil
-            }
-            
-            let calendar = Calendar.current
-            let currentDate = Date()
-            let components = calendar.dateComponents([.year], from: selectedDate, to: currentDate)
-            return components.year
+        if let selectedDate = selectedDate {
+        let calendar = Calendar.current
+        let currentDate = Date()
+        let components = calendar.dateComponents([.year], from: selectedDate, to: currentDate)
+        return components.year
         }
-        
-        @objc private func dismissDatePicker() {
-            
-            if let idade = calcularIdade(), idade >= 16 {
-                dateOfBirthView.nextButton.backgroundColor = .white
-                dateOfBirthView.nextButton.isEnabled = true
-                dateOfBirthView.nextButton.updateConfiguration()
-                dateOfBirthView.noticeLabel.isHidden = true
-                dateOfBirthView.datePicker.textColor = .black
-                dateOfBirthView.datePicker.backgroundColor = .gray
-            } else {
-                dateOfBirthView.noticeLabel.isHidden = false
-                dateOfBirthView.datePicker.backgroundColor = .white
-                dateOfBirthView.datePicker.textColor = .red
-                dateOfBirthView.nextButton.updateConfiguration()
-            }
-            
-            dateOfBirthView.datePicker.endEditing(true)
-        }
+        return Int()
+    }
     
     func nextButton() {
         dateOfBirthView.nextButton.addTarget(self, action: #selector(goForNextPage), for: .touchUpInside)
     }
     
     @objc private func goForNextPage() {
-        coordinator?.goToGender()
-        dismissDatePicker()
+        if let idade = calcularIdade(), idade >= 16 {
+            dateOfBirthView.nextButton.backgroundColor = .white
+            dateOfBirthView.nextButton.isEnabled = true
+            dateOfBirthView.nextButton.updateConfiguration()
+            dateOfBirthView.noticeLabel.isHidden = true
+            dateOfBirthView.dateTextField.textColor = .black
+            dateOfBirthView.dateTextField.backgroundColor = .gray
+            dateOfBirthView.dateTextField.endEditing(true)
+            coordinator?.goToGender()
+        } else {
+            dateOfBirthView.noticeLabel.isHidden = false
+            dateOfBirthView.dateTextField.backgroundColor = .white
+            dateOfBirthView.dateTextField.textColor = .red
+            dateOfBirthView.nextButton.updateConfiguration()
+        }
     }
 }

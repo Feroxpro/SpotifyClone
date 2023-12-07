@@ -11,20 +11,13 @@ import SnapKit
 
 class CreatePasswordForEmailView: BaseView {
     
-    lazy var TitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Crie uma senha?"
-        label.textColor = UIColor.white
-        let font = UIFont.systemFont(ofSize: 25)
-        label.font = font.bold()
+    lazy var titleLabel: UILabel = {
+        let label = Titlelabel(text: "Crie uma senha?")
         return label
     }()
     
     lazy var inputPasswordField: UITextField = {
-        let textField = UITextField()        
-        textField.backgroundColor = .gray
-        textField.text = "12345678"
-        textField.layer.cornerRadius = 5
+        let textField = DefaultTextField()
         textField.isSecureTextEntry = true
         return textField
     }()
@@ -39,26 +32,17 @@ class CreatePasswordForEmailView: BaseView {
     }()
     
     lazy var noticeLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Use pelo menos 8 caracteres."
-        label.textColor = UIColor.white
-        label.font = UIFont.systemFont(ofSize: 12)
+        let label = NoticeLabel(text: "Use pelo menos 8 caracteres.")
         return label
     }()
     
     lazy var nextButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .gray
-        button.setTitle("Avançar", for: .normal)
-        button.setTitleColor(UIColor.black, for: .normal)
-        let font = UIFont.systemFont(ofSize: 15)
-        button.titleLabel?.font = font.bold()
-        button.layer.cornerRadius = 24
+        let button = NextButton(title: "Avançar")
         return button
     }()
     
     override func addSubviews() {
-        addSubview(TitleLabel)
+        addSubview(titleLabel)
         addSubview(inputPasswordField)
         addSubview(showHideButton)
         addSubview(noticeLabel)
@@ -67,15 +51,12 @@ class CreatePasswordForEmailView: BaseView {
     
     override func configureConstraints() {
         
-        TitleLabel.snp.makeConstraints { make in
+        titleLabel.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(20)
             make.leading.equalTo(safeAreaLayoutGuide).offset(5)
         }
         inputPasswordField.snp.makeConstraints { make in
-            make.top.equalTo(TitleLabel.snp.bottom).offset(5)
-            make.leading.equalTo(safeAreaLayoutGuide).offset(5)
-            make.height.equalTo(50)
-            make.width.equalTo(400)
+            make.top.equalTo(titleLabel.snp.bottom).offset(5)
         }
         showHideButton.snp.makeConstraints { make in
             make.centerY.equalTo(inputPasswordField)
@@ -88,8 +69,6 @@ class CreatePasswordForEmailView: BaseView {
         nextButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(noticeLabel.snp.bottom).offset(25)
-            make.height.equalTo(45)
-            make.width.equalTo(120)
         }
     }
 }
