@@ -10,6 +10,7 @@ import UIKit
 class NameAndTermOfUseViewController: UIViewController {
     
     var nameAndtermView: NameAndTermOfUseView?
+    var viewModel: NameAndTermOfUseViewModel?
     weak var coordinator:  MainCoordinator?
     
     override func loadView() {
@@ -19,5 +20,20 @@ class NameAndTermOfUseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initViewModel()
+    }
+    
+    func initViewModel() {
+        if let nameAndtermView = self.nameAndtermView {
+            if let coordinator = coordinator {
+                viewModel = NameAndTermOfUseViewModel(nameAndTermsOfUseView: nameAndtermView, nameAndTermOfUseViewController: self, coordinator: coordinator)
+                viewModel?.checkBoxTermsTappedButton()
+                viewModel?.updateTermsCheckboxState()
+                viewModel?.updateDismissCheckboxState()
+                viewModel?.checkBoxDismissTappedButton()
+                viewModel?.checkBoxShareDataTappedButton()
+                viewModel?.updateShareDataCheckboxState()
+            }
+        }
     }
 }

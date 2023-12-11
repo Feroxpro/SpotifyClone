@@ -12,7 +12,7 @@ import SnapKit
 class GenderView: BaseView {
     
     lazy var titleLabel: UILabel = {
-        let label = Defaultlabel(text: "Qual é o seu gênero?")
+        let label = Titlelabel(text: "Qual é o seu gênero?")
         return label
     }()
     

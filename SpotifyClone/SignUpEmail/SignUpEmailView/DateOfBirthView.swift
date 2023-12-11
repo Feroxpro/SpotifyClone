@@ -12,7 +12,7 @@ import SnapKit
 class DateOfBirthView: BaseView {
     
     lazy var titleLabel: UILabel = {
-        let label = Defaultlabel(text: "Qual é a sua data de nascimento?")
+        let label = Titlelabel(text: "Qual é a sua data de nascimento?")
         return label
     }()
     
@@ -27,7 +27,7 @@ class DateOfBirthView: BaseView {
     }()
     
     lazy var noticeLabel: UILabel = {
-        let label = NoticeLabel(text: "Sentimos muito, mas você não atende os requisitos de idade do spotify")
+        let label = DefaultLabel(text: "Sentimos muito, mas você não atende os requisitos de idade do spotify")
         label.isHidden = true
         return label
     }()

@@ -12,7 +12,7 @@ import SnapKit
 class CreatePasswordForEmailView: BaseView {
     
     lazy var titleLabel: UILabel = {
-        let label = Defaultlabel(text: "Crie uma senha?")
+        let label = Titlelabel(text: "Crie uma senha?")
         return label
     }()
     
@@ -20,6 +20,7 @@ class CreatePasswordForEmailView: BaseView {
         let textField = DefaultTextField()
         textField.text = "12345678"
         textField.isSecureTextEntry = true
+        textField.keyboardType = .emailAddress
         return textField
     }()
     
@@ -33,7 +34,7 @@ class CreatePasswordForEmailView: BaseView {
     }()
     
     lazy var noticeLabel: UILabel = {
-        let label = NoticeLabel(text: "Use pelo menos 8 caracteres.")
+        let label = DefaultLabel(text: "Use pelo menos 8 caracteres.")
         return label
     }()
     

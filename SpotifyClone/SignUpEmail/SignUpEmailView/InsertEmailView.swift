@@ -12,7 +12,7 @@ import SnapKit
 class InsertEmailView: BaseView {
     
     lazy var titleLabel: UILabel = {
-        let label = Defaultlabel(text: "Qual o seu E-mail")
+        let label = Titlelabel(text: "Qual o seu E-mail")
         return label
     }()
     
@@ -23,7 +23,7 @@ class InsertEmailView: BaseView {
     }()
     
     lazy var noticeLabel: UILabel = {
-        let label = NoticeLabel(text: "Você vai ter que confirmar esse e-mail mais tarde.")
+        let label = DefaultLabel(text: "Você vai ter que confirmar esse e-mail mais tarde.")
         return label
     }()
     

@@ -41,10 +41,11 @@
 		B4AA9AA52B1F8FE30053E663 /* GenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9AA42B1F8FE30053E663 /* GenderViewModel.swift */; };
 		B4AA9AA72B217A640053E663 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9AA62B217A640053E663 /* NextButton.swift */; };
 		B4AA9AAA2B217BB70053E663 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9AA92B217BB70053E663 /* TitleLabel.swift */; };
-		B4AA9AAC2B217EF00053E663 /* NoticeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9AAB2B217EF00053E663 /* NoticeLabel.swift */; };
+		B4AA9AAC2B217EF00053E663 /* DefaultLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9AAB2B217EF00053E663 /* DefaultLabel.swift */; };
 		B4AA9AAE2B217F750053E663 /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9AAD2B217F750053E663 /* DefaultTextField.swift */; };
 		B4AA9AB02B2185B90053E663 /* NameAndTermOfUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9AAF2B2185B90053E663 /* NameAndTermOfUseView.swift */; };
 		B4AA9AB22B2187D70053E663 /* NameAndTermOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9AB12B2187D70053E663 /* NameAndTermOfUseViewController.swift */; };
+		B4AA9AB42B2690280053E663 /* NameAndTermOfUseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9AB32B2690280053E663 /* NameAndTermOfUseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,10 +103,11 @@
 		B4AA9AA42B1F8FE30053E663 /* GenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewModel.swift; sourceTree = "<group>"; };
 		B4AA9AA62B217A640053E663 /* NextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
 		B4AA9AA92B217BB70053E663 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
-		B4AA9AAB2B217EF00053E663 /* NoticeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeLabel.swift; sourceTree = "<group>"; };
+		B4AA9AAB2B217EF00053E663 /* DefaultLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLabel.swift; sourceTree = "<group>"; };
 		B4AA9AAD2B217F750053E663 /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
 		B4AA9AAF2B2185B90053E663 /* NameAndTermOfUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndTermOfUseView.swift; sourceTree = "<group>"; };
 		B4AA9AB12B2187D70053E663 /* NameAndTermOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndTermOfUseViewController.swift; sourceTree = "<group>"; };
+		B4AA9AB32B2690280053E663 /* NameAndTermOfUseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndTermOfUseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				B4AA9A902B16E7D60053E663 /* CreatePasswordForEmailViewModel.swift */,
 				B4AA9A9A2B1970D00053E663 /* DateOfBirthViewModel.swift */,
 				B4AA9AA42B1F8FE30053E663 /* GenderViewModel.swift */,
+				B4AA9AB32B2690280053E663 /* NameAndTermOfUseViewModel.swift */,
 			);
 			path = SignUpEmailViewModel;
 			sourceTree = "<group>";
@@ -336,7 +339,7 @@
 			children = (
 				B4AA9AA62B217A640053E663 /* NextButton.swift */,
 				B4AA9AA92B217BB70053E663 /* TitleLabel.swift */,
-				B4AA9AAB2B217EF00053E663 /* NoticeLabel.swift */,
+				B4AA9AAB2B217EF00053E663 /* DefaultLabel.swift */,
 				B4AA9AAD2B217F750053E663 /* DefaultTextField.swift */,
 			);
 			path = Components;
@@ -499,12 +502,13 @@
 				B4AA9AA72B217A640053E663 /* NextButton.swift in Sources */,
 				B40D97BB2B15D80F004DBC1F /* UIColor+Extensions.swift in Sources */,
 				B40D97BD2B15DE33004DBC1F /* UIFont+Extensions.swift in Sources */,
+				B4AA9AB42B2690280053E663 /* NameAndTermOfUseViewModel.swift in Sources */,
 				B40D97CE2B15E77E004DBC1F /* InsertEmailView.swift in Sources */,
 				B4AA9AA52B1F8FE30053E663 /* GenderViewModel.swift in Sources */,
 				B4AA9AA02B1F8E100053E663 /* GenderView.swift in Sources */,
 				B40D97CA2B15E2BA004DBC1F /* InsertEmailViewController.swift in Sources */,
 				B4AA9AAE2B217F750053E663 /* DefaultTextField.swift in Sources */,
-				B4AA9AAC2B217EF00053E663 /* NoticeLabel.swift in Sources */,
+				B4AA9AAC2B217EF00053E663 /* DefaultLabel.swift in Sources */,
 				B4AA9A992B19705D0053E663 /* DateOfBirthView.swift in Sources */,
 				B4AA9A952B16E9750053E663 /* CreatePasswordForEmailViewController.swift in Sources */,
 				B4AA9AAA2B217BB70053E663 /* TitleLabel.swift in Sources */,

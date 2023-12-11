@@ -7,13 +7,13 @@
 
 import UIKit
 
-class NoticeLabel: UILabel {
+class DefaultLabel: UILabel {
    
     init(text: String) {
             super.init(frame: .zero)
             self.text = text
         textColor = UIColor.white
-        font = UIFont.systemFont(ofSize: 12)
+        font = UIFont.systemFont(ofSize: 11)
 
     }
     

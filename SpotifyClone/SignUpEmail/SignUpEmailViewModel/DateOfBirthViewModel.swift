@@ -92,20 +92,20 @@ class DateOfBirthViewModel {
     }
     
     @objc private func goForNextPage() {
-        if let idade = calcularIdade(), idade >= 16 {
-            dateOfBirthView.nextButton.backgroundColor = .white
-            dateOfBirthView.nextButton.isEnabled = true
-            dateOfBirthView.nextButton.updateConfiguration()
-            dateOfBirthView.noticeLabel.isHidden = true
-            dateOfBirthView.dateTextField.textColor = .black
-            dateOfBirthView.dateTextField.backgroundColor = .gray
-            dateOfBirthView.dateTextField.endEditing(true)
+//        if let idade = calcularIdade(), idade >= 16 {
+//            dateOfBirthView.nextButton.backgroundColor = .white
+//            dateOfBirthView.nextButton.isEnabled = true
+//            dateOfBirthView.nextButton.updateConfiguration()
+//            dateOfBirthView.noticeLabel.isHidden = true
+//            dateOfBirthView.dateTextField.textColor = .black
+//            dateOfBirthView.dateTextField.backgroundColor = .gray
+//            dateOfBirthView.dateTextField.endEditing(true)
             coordinator?.goToGender()
-        } else {
-            dateOfBirthView.noticeLabel.isHidden = false
-            dateOfBirthView.dateTextField.backgroundColor = .white
-            dateOfBirthView.dateTextField.textColor = .red
-            dateOfBirthView.nextButton.updateConfiguration()
-        }
+//        } else {
+//            dateOfBirthView.noticeLabel.isHidden = false
+//            dateOfBirthView.dateTextField.backgroundColor = .white
+//            dateOfBirthView.dateTextField.textColor = .red
+//            dateOfBirthView.nextButton.updateConfiguration()
+//        }
     }
 }
