@@ -25,7 +25,15 @@ class NameAndTermOfUseViewModel {
     
     func updateTermsCheckboxState() {
         let imageName = isCheckedTermsOfUse ? "checkmark.circle.fill" : "circle"
-        nameAndTermsOfUseView?.checkBoxTermOfUseButton.setImage(UIImage(systemName: imageName), for: .normal)
+            nameAndTermsOfUseView?.checkBoxTermOfUseButton.setImage(UIImage(systemName: imageName), for: .normal)
+        guard let nameField = nameAndTermsOfUseView?.nameTextField.text?.count else { return }
+        if imageName == "checkmark.circle.fill" && nameField > 3 {
+            nameAndTermsOfUseView?.createAccountButton.isEnabled = true
+            nameAndTermsOfUseView?.createAccountButton.backgroundColor = .white
+        } else {
+            nameAndTermsOfUseView?.createAccountButton.isEnabled = false
+            nameAndTermsOfUseView?.createAccountButton.backgroundColor = .gray
+        }
     }
     
     func  checkBoxTermsTappedButton() {
@@ -77,4 +85,14 @@ class NameAndTermOfUseViewModel {
     @objc func createAccountTappedButton() {
         print("foi")
     }
+    
+    func termsWebViewButton() {
+        nameAndTermsOfUseView?.termsOfUseButtonLink.addTarget(self, action: #selector(labelTermsTapped), for: .touchUpInside)
+    }
+    
+    @objc func labelTermsTapped() {
+        print("link")
+    }
+    
+    
 }

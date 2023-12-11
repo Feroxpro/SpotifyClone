@@ -47,10 +47,14 @@ class NameAndTermOfUseView: BaseView {
         return button
     }()
     
-    lazy var termsOfUseButtonLink: UILabel = {
-        let label = DefaultLabel(text: "Termos de uso")
-        label.textColor = UIColor.green
-        return label
+    lazy var termsOfUseButtonLink: UIButton = {
+        let button = UIButton()
+        button.setTitle("Termos de uso", for: .normal)
+        button.setTitleColor(.green, for: .normal)
+        let font = UIFont.systemFont(ofSize: 11)
+        button.titleLabel?.font = font.bold()
+        button.isEnabled = true
+        return button
     }()
     
     lazy var lgpdTermsLabel: UILabel = {

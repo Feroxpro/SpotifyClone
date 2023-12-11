@@ -33,6 +33,7 @@ class NameAndTermOfUseViewController: UIViewController {
                 viewModel?.checkBoxDismissTappedButton()
                 viewModel?.checkBoxShareDataTappedButton()
                 viewModel?.updateShareDataCheckboxState()
+                viewModel?.termsWebViewButton()
             }
         }
     }
