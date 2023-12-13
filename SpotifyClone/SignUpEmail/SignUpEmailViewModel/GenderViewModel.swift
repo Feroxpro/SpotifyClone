@@ -32,9 +32,8 @@ class GenderViewModel: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func configureGenderPickerView() {
-        genderView.genderTextField.inputView = pickerView  // Substitua genderTextField pelo nome do seu UITextField
+        genderView.genderTextField.inputView = pickerView
 
-        // Configurar toolbar com botão "OK"
         toolbar.barStyle = .default
         toolbar.isTranslucent = true
         toolbar.sizeToFit()
@@ -64,13 +63,13 @@ class GenderViewModel: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
     // MARK: - UIPickerViewDelegate
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        genderView.genderTextField.text = generos[row]  // Substitua genderTextField pelo nome do seu UITextField
+        genderView.genderTextField.text = generos[row]
     }
 
     // MARK: - Toolbar Button Action
 
     @objc func doneButtonTapped() {
-        genderView.genderTextField.resignFirstResponder()  // Substitua genderTextField pelo nome do seu UITextField
+        genderView.genderTextField.resignFirstResponder()  
     }
     
     func nextButton() {

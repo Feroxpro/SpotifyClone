@@ -50,23 +50,25 @@ class NameAndTermOfUseView: BaseView {
     lazy var termsOfUseButtonLink: UIButton = {
         let button = UIButton()
         button.setTitle("Termos de uso", for: .normal)
-        button.setTitleColor(.green, for: .normal)
+        button.setTitleColor(.greenSpotify, for: .normal)
         let font = UIFont.systemFont(ofSize: 11)
         button.titleLabel?.font = font.bold()
-        button.isEnabled = true
         return button
     }()
     
-    lazy var lgpdTermsLabel: UILabel = {
+    lazy var privacyPoliceTermsLabel: UILabel = {
         let label = DefaultLabel(text: "Para saber mais sobre como o Spotify coleta, utiliza, compartilha e protege seus dados pessoais, leia a Política de Privacidade do Spotify.")
             label.numberOfLines = 0
         return label
     }()
     
-    lazy var lgpdButtonLink: UILabel = {
-        let label = DefaultLabel(text: "Política de Privacidade")
-        label.textColor = UIColor.green
-        return label
+    lazy var privacyPoliceButtonLink: UIButton = {
+        let button = UIButton()
+        button.setTitle("Política de privacidade", for: .normal)
+        button.setTitleColor(.greenSpotify, for: .normal)
+        let font = UIFont.systemFont(ofSize: 11)
+        button.titleLabel?.font = font.bold()
+        return button
     }()
     
     lazy var dismissMarketingLabel: UILabel = {
@@ -106,8 +108,8 @@ class NameAndTermOfUseView: BaseView {
         addSubview(iAgreeTermsOfUseLabel)
         addSubview(termsOfUseButtonLink)
         addSubview(checkBoxTermOfUseButton)
-        addSubview(lgpdTermsLabel)
-        addSubview(lgpdButtonLink)
+        addSubview(privacyPoliceTermsLabel)
+        addSubview(privacyPoliceButtonLink)
         addSubview(dismissMarketingLabel)
         addSubview(shareDataLabel)
         addSubview(checkBoxDismissMarketingButton)
@@ -145,17 +147,17 @@ class NameAndTermOfUseView: BaseView {
             make.top.equalTo(mandatoryLabel.snp.bottom).offset(10)
             make.trailing.equalTo(safeAreaLayoutGuide).inset(5)
         }
-        lgpdTermsLabel.snp.makeConstraints { make in
+        privacyPoliceTermsLabel.snp.makeConstraints { make in
             make.top.equalTo(termsOfUseButtonLink.snp.bottom).offset(20)
             make.leading.equalTo(safeAreaLayoutGuide).offset(5)
             make.trailing.equalTo(safeAreaLayoutGuide).inset(5)
         }
-        lgpdButtonLink.snp.makeConstraints { make in
-            make.top.equalTo(lgpdTermsLabel.snp.bottom).offset(20)
+        privacyPoliceButtonLink.snp.makeConstraints { make in
+            make.top.equalTo(privacyPoliceTermsLabel.snp.bottom).offset(20)
             make.leading.equalTo(safeAreaLayoutGuide).inset(5)
         }
         dismissMarketingLabel.snp.makeConstraints { make in
-            make.top.equalTo(lgpdButtonLink.snp.bottom).offset(20)
+            make.top.equalTo(privacyPoliceButtonLink.snp.bottom).offset(20)
             make.leading.equalTo(safeAreaLayoutGuide).offset(5)
         }
         checkBoxDismissMarketingButton.snp.makeConstraints { make in

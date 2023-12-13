@@ -41,12 +41,10 @@ class InsertEmailViewModel {
         }
     }
 
-    // Adicione a ação de destino para o evento EditingChanged do campo de e-mail
     @objc func emailTextFieldEditingChanged(_ textField: UITextField) {
         updateNextButtonState()
     }
 
-    // Adicione a ação de destino para o evento EditingDidBegin do campo de e-mail
     @objc func emailTextFieldEditingDidBegin(_ textField: UITextField) {
         updateNextButtonState()
     }

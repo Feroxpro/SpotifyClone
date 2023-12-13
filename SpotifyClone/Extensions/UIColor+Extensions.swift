@@ -1,17 +1,16 @@
 //
-//  UIColor+Extensions.swift
+//  GreenSpotify.swift
 //  SpotifyClone
 //
-//  Created by Felipe Henrique Domingos on 28/11/23.
+//  Created by Felipe Henrique Domingos on 13/12/23.
 //
 
 import Foundation
+
 import UIKit
 
 extension UIColor {
-    static var spotifyGreen: UIColor {
-        return UIColor(red: 58.0, green: 122.0, blue: 63.0, alpha: 1.0)
+    static var greenSpotify: UIColor {
+        return UIColor(red: 30/255.0, green: 215/255.0, blue: 96/255.0, alpha: 1.0)
     }
 }
-
-

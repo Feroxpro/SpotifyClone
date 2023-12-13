@@ -52,6 +52,17 @@ class MainCoordinator: Coordinator {
         viewController.coordinator = self
         self.navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func goTermsToWebView() {
+        let viewController = TermsWebViewController()
+        viewController.coordinator = self
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
+    func goPolicyAndPrivacyToWebView() {
+        let viewController = PolicyAndPrivacyViewController()
+        viewController.coordinator = self
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
 //
 //    func goToAddService() {
 //        let viewController = AddServiceViewController()

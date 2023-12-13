@@ -91,8 +91,14 @@ class NameAndTermOfUseViewModel {
     }
     
     @objc func labelTermsTapped() {
-        print("link")
+        coordinator?.goTermsToWebView()
     }
     
+    func privacyPoliceWebViewButton() {
+        nameAndTermsOfUseView?.privacyPoliceButtonLink.addTarget(self, action: #selector(privacyPoliceTermsTapped), for: .touchUpInside)
+    }
     
+    @objc func privacyPoliceTermsTapped() {
+        coordinator?.goPolicyAndPrivacyToWebView()
+    }
 }

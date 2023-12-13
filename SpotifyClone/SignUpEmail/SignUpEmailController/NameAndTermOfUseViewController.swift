@@ -12,7 +12,6 @@ class NameAndTermOfUseViewController: UIViewController {
     var nameAndtermView: NameAndTermOfUseView?
     var viewModel: NameAndTermOfUseViewModel?
     weak var coordinator:  MainCoordinator?
-    
     override func loadView() {
         nameAndtermView = NameAndTermOfUseView()
         view = nameAndtermView
@@ -21,6 +20,7 @@ class NameAndTermOfUseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initViewModel()
+        configureNavigationBar() 
     }
     
     func initViewModel() {
@@ -34,6 +34,7 @@ class NameAndTermOfUseViewController: UIViewController {
                 viewModel?.checkBoxShareDataTappedButton()
                 viewModel?.updateShareDataCheckboxState()
                 viewModel?.termsWebViewButton()
+                viewModel?.privacyPoliceWebViewButton()
             }
         }
     }

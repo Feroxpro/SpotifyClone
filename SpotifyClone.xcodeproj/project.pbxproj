@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B40D97B52B13038E004DBC1F /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D97B42B13038E004DBC1F /* UIImage+Extensions.swift */; };
-		B40D97BB2B15D80F004DBC1F /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D97BA2B15D80F004DBC1F /* UIColor+Extensions.swift */; };
 		B40D97BD2B15DE33004DBC1F /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D97BC2B15DE33004DBC1F /* UIFont+Extensions.swift */; };
 		B40D97C02B15DFF4004DBC1F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D97BE2B15DFF4004DBC1F /* MainCoordinator.swift */; };
 		B40D97C12B15DFF4004DBC1F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D97BF2B15DFF4004DBC1F /* Coordinator.swift */; };
@@ -46,6 +45,11 @@
 		B4AA9AB02B2185B90053E663 /* NameAndTermOfUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9AAF2B2185B90053E663 /* NameAndTermOfUseView.swift */; };
 		B4AA9AB22B2187D70053E663 /* NameAndTermOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9AB12B2187D70053E663 /* NameAndTermOfUseViewController.swift */; };
 		B4AA9AB42B2690280053E663 /* NameAndTermOfUseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA9AB32B2690280053E663 /* NameAndTermOfUseViewModel.swift */; };
+		B4CB9B012B27C96500B03305 /* WebViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CB9B002B27C96500B03305 /* WebViewView.swift */; };
+		B4CB9B032B27CA4300B03305 /* TermsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CB9B022B27CA4300B03305 /* TermsWebViewController.swift */; };
+		B4E141082B29741600CDDF48 /* PolicyAndPrivacyViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E141072B29741600CDDF48 /* PolicyAndPrivacyViewControler.swift */; };
+		B4E1410A2B29785300CDDF48 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E141092B29785300CDDF48 /* UIColor+Extensions.swift */; };
+		B4E1410C2B297B6600CDDF48 /* NavigationItens+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E1410B2B297B6600CDDF48 /* NavigationItens+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +71,6 @@
 
 /* Begin PBXFileReference section */
 		B40D97B42B13038E004DBC1F /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
-		B40D97BA2B15D80F004DBC1F /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		B40D97BC2B15DE33004DBC1F /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		B40D97BE2B15DFF4004DBC1F /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		B40D97BF2B15DFF4004DBC1F /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -108,6 +111,11 @@
 		B4AA9AAF2B2185B90053E663 /* NameAndTermOfUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndTermOfUseView.swift; sourceTree = "<group>"; };
 		B4AA9AB12B2187D70053E663 /* NameAndTermOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndTermOfUseViewController.swift; sourceTree = "<group>"; };
 		B4AA9AB32B2690280053E663 /* NameAndTermOfUseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndTermOfUseViewModel.swift; sourceTree = "<group>"; };
+		B4CB9B002B27C96500B03305 /* WebViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewView.swift; sourceTree = "<group>"; };
+		B4CB9B022B27CA4300B03305 /* TermsWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsWebViewController.swift; sourceTree = "<group>"; };
+		B4E141072B29741600CDDF48 /* PolicyAndPrivacyViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyAndPrivacyViewControler.swift; sourceTree = "<group>"; };
+		B4E141092B29785300CDDF48 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		B4E1410B2B297B6600CDDF48 /* NavigationItens+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationItens+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +148,9 @@
 			isa = PBXGroup;
 			children = (
 				B40D97B42B13038E004DBC1F /* UIImage+Extensions.swift */,
-				B40D97BA2B15D80F004DBC1F /* UIColor+Extensions.swift */,
+				B4E141092B29785300CDDF48 /* UIColor+Extensions.swift */,
 				B40D97BC2B15DE33004DBC1F /* UIFont+Extensions.swift */,
+				B4E1410B2B297B6600CDDF48 /* NavigationItens+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -186,6 +195,8 @@
 				B4AA9A962B196FFA0053E663 /* DateOfBirthViewController.swift */,
 				B4AA9AA22B1F8F3D0053E663 /* GenderViewController.swift */,
 				B4AA9AB12B2187D70053E663 /* NameAndTermOfUseViewController.swift */,
+				B4CB9B022B27CA4300B03305 /* TermsWebViewController.swift */,
+				B4E141072B29741600CDDF48 /* PolicyAndPrivacyViewControler.swift */,
 			);
 			path = SignUpEmailController;
 			sourceTree = "<group>";
@@ -210,6 +221,7 @@
 				B4AA9A982B19705D0053E663 /* DateOfBirthView.swift */,
 				B4AA9A9F2B1F8E100053E663 /* GenderView.swift */,
 				B4AA9AAF2B2185B90053E663 /* NameAndTermOfUseView.swift */,
+				B4CB9B002B27C96500B03305 /* WebViewView.swift */,
 			);
 			path = SignUpEmailView;
 			sourceTree = "<group>";
@@ -483,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B45017862B12D65D00373308 /* LoginViewController.swift in Sources */,
+				B4E141082B29741600CDDF48 /* PolicyAndPrivacyViewControler.swift in Sources */,
 				B45017C42B12DA9C00373308 /* BaseViewCell.swift in Sources */,
 				B4AA9A932B16E7ED0053E663 /* CreatePasswordForEmailView.swift in Sources */,
 				B4AA9A9B2B1970D00053E663 /* DateOfBirthViewModel.swift in Sources */,
@@ -493,6 +506,7 @@
 				B45017C52B12DA9C00373308 /* BaseView.swift in Sources */,
 				B40D97C02B15DFF4004DBC1F /* MainCoordinator.swift in Sources */,
 				B4AA9AA32B1F8F3D0053E663 /* GenderViewController.swift in Sources */,
+				B4E1410C2B297B6600CDDF48 /* NavigationItens+Extensions.swift in Sources */,
 				B40D97CC2B15E3F9004DBC1F /* LoginViewModel.swift in Sources */,
 				B4AA9A912B16E7D60053E663 /* CreatePasswordForEmailViewModel.swift in Sources */,
 				B45017C32B12DA9C00373308 /* BaseTableViewCell.swift in Sources */,
@@ -500,19 +514,21 @@
 				B40D97C12B15DFF4004DBC1F /* Coordinator.swift in Sources */,
 				B4AA9AB02B2185B90053E663 /* NameAndTermOfUseView.swift in Sources */,
 				B4AA9AA72B217A640053E663 /* NextButton.swift in Sources */,
-				B40D97BB2B15D80F004DBC1F /* UIColor+Extensions.swift in Sources */,
 				B40D97BD2B15DE33004DBC1F /* UIFont+Extensions.swift in Sources */,
 				B4AA9AB42B2690280053E663 /* NameAndTermOfUseViewModel.swift in Sources */,
 				B40D97CE2B15E77E004DBC1F /* InsertEmailView.swift in Sources */,
 				B4AA9AA52B1F8FE30053E663 /* GenderViewModel.swift in Sources */,
+				B4CB9B012B27C96500B03305 /* WebViewView.swift in Sources */,
 				B4AA9AA02B1F8E100053E663 /* GenderView.swift in Sources */,
 				B40D97CA2B15E2BA004DBC1F /* InsertEmailViewController.swift in Sources */,
 				B4AA9AAE2B217F750053E663 /* DefaultTextField.swift in Sources */,
+				B4E1410A2B29785300CDDF48 /* UIColor+Extensions.swift in Sources */,
 				B4AA9AAC2B217EF00053E663 /* DefaultLabel.swift in Sources */,
 				B4AA9A992B19705D0053E663 /* DateOfBirthView.swift in Sources */,
 				B4AA9A952B16E9750053E663 /* CreatePasswordForEmailViewController.swift in Sources */,
 				B4AA9AAA2B217BB70053E663 /* TitleLabel.swift in Sources */,
 				B4AA9A972B196FFA0053E663 /* DateOfBirthViewController.swift in Sources */,
+				B4CB9B032B27CA4300B03305 /* TermsWebViewController.swift in Sources */,
 				B40D97B52B13038E004DBC1F /* UIImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

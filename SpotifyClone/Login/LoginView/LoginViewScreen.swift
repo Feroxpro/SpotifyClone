@@ -30,7 +30,7 @@ class LoginViewScreen: BaseView {
     
     lazy var signInTextButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .green
+        button.backgroundColor = .greenSpotify
         button.layer.cornerRadius = 20
         button.setTitle("Inscreva-se grátis", for: .normal)
         button.contentHorizontalAlignment = .center
